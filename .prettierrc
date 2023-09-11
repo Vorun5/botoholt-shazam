@@ -1,0 +1,10 @@
+{
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "prettier.arrowParens": "avoid",
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "all"
+}
