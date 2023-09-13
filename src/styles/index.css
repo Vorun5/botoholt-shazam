@@ -2,6 +2,9 @@
 @import url('reset.css');
 @import url('variables.css');
 @import url('styles.css');
+@import url('recognized-song.css');
+@import url('recommendation.css');
+@import url('shazam-field.css');
 
 html,
 body {
@@ -16,15 +19,5 @@ body {
     html,
     body {
         font-size: 16px;
-    }
-}
-
-button {
-    border: none;
-    background-color: transparent;
-
-    &:focus {
-        border: none;
-        outline: none;
     }
 }

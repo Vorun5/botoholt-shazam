@@ -16,7 +16,7 @@ export function ShazamField() {
                 }}
             />
             <button
-                className="shazam-field-bth"
+                className="button shazam-field-bth"
                 type="button"
                 onClick={() => {
                     console.log('search')

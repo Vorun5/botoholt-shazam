@@ -1,0 +1,80 @@
+.recognized-song {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.recognized-song-cover {
+    min-width: var(--bh-recognized-song-cover-size);
+    min-height: var(--bh-recognized-song-cover-size);
+    width: var(--bh-recognized-song-cover-size);
+    height: var(--bh-recognized-song-cover-size);
+    border-radius: var(--bh-recognized-song-cover-border-radius);
+    overflow: hidden;
+    background-color: rgb(var(--bh-color-rgb), 0.1);
+}
+
+.recognized-song-cover-img {
+    position: relative;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+}
+
+.recognized-song-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.recognized-song-info-title {
+    color: var(--bh-color);
+    font-weight: bold;
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.7rem;
+    max-width: 360px;
+    text-align: center;
+}
+
+.recognized-song-info-genre {
+    display: inline-block;
+    margin: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--bh-color);
+    font-weight: 500;
+    padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+    background-color: rgb(var(--bh-color-rgb), 0.15);
+    border: var(--bh-card-border-width) solid rgb(var(--bh-color-rgb), 0.1);
+    border-radius: var(--bh-card-border-radius);
+}
+
+.recognized-song-info-links {
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 800px) {
+    .recognized-song-info {
+        padding: 1rem 0 1rem 1.5rem;
+    }
+}
+
+@media (min-width: 650px) {
+    .recognized-song {
+        align-items: start;
+        flex-direction: row;
+    }
+
+    .recognized-song-info {
+        display: block;
+        padding: 1rem 0 1rem 1.5rem;
+    }
+
+    .recognized-song-info-title {
+        max-width: none;
+        text-align: left;
+    }
+}

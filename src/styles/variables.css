@@ -14,6 +14,9 @@ body {
     --bh-card-border-width: 1px;
     --bh-field-border-width: 2px;
     --bh-shazam-field-height: 3rem;
+    --bh-recognized-song-cover-size: 200px;
+    --bh-recognized-song-cover-border-radius: 32px;
+    --bh-recommendation-song-cover-size: 80px;
 
     --bh-color: #0e0e10;
     --bh-color-rgb: 14, 14, 16;

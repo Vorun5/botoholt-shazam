@@ -1,0 +1,48 @@
+
+.shazam-field {
+    position: relative;
+    height: var(--bh-shazam-field-height);
+    border: var(--bh-field-border-width) solid var(--bh-blue);
+    border-radius: var(--bh-card-border-radius);
+    overflow: hidden;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.shazam-field-input {
+    background-color: var(--bh-background);
+    height: var(--bh-shazam-field-height);
+    border: 0;
+    width: 100%;
+    position: relative;
+    font-size: 1.3rem;
+    padding: 0 1rem;
+    color: var(--bh-color);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.shazam-field-bth {
+    background-color: var(--bh-background);
+    position: absolute;
+    right: 0;
+    padding-right: 0.7rem;
+    top: 0;
+    height: var(--bh-shazam-field-height);
+    width: var(--bh-shazam-field-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+.shazam-field-bth-icon {
+    width: 30px;
+    height: 30px;
+    fill: var(--bh-blue);
+}

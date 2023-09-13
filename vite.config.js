@@ -13,6 +13,7 @@ export default defineConfig({
             styles: '/src/styles',
             assets: '/src/assets',
             pages: '/src/pages',
+            lib: '/src/lib',
         },
     },
 })
