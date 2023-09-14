@@ -147,7 +147,9 @@ export function ShazamResult() {
                                 }}
                             >
                                 <ShazamIcon className="song-link-icon" />
-                                {shazamResult.username} again
+                                <span className="song-link-text-full">
+                                    {shazamResult.username} again
+                                </span>
                             </button>
                         </div>
                     </div>

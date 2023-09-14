@@ -1,23 +1,21 @@
 .app {
     min-height: 100vh;
-    width: calc(100% - 2rem);
-    max-width: 1050px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
 .header {
+    width: calc(100% - 2rem);
+    max-width: var(--bh-max-content-width);
+    margin: 0 auto;
     padding: 2rem 0 1.5em 0;
 }
 
-.footer {
-    background-color: rgb(var(--bh-color-rgb), 0.8);
-    width: 100%;
-    padding: 1rem 0;
-}
-
 .content {
+    width: calc(100% - 2rem);
+    max-width: var(--bh-max-content-width);
+    margin: 0 auto;
     flex: 1;
 }
 
@@ -142,6 +140,10 @@
 .song-link-icon {
     width: 1.2rem;
     height: 1.2rem;
+}
+
+.song-link-text {
+    margin-left: 0.3rem;
 }
 
 .song-link-text-full {

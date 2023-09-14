@@ -3,9 +3,9 @@ import { ReactComponent as Logo } from 'assets/logo.svg'
 export function Header() {
     return (
         <header className="header">
-            <div className="header-logo">
+            <a className="header-logo" href="https://bho.lt/">
                 <Logo />
-            </div>
+            </a>
         </header>
     )
 }
