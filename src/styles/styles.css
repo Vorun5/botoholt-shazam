@@ -1,24 +1,23 @@
 .app {
     min-height: 100vh;
-    width: calc(100% - 2rem);
-    max-width: 1050px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
 }
 
 .header {
-    padding: 2rem 0 1.5em 0;
-}
-
-.footer {
-    background-color: rgb(var(--bh-color-rgb), 0.8);
-    width: 100%;
-    padding: 1rem 0;
+    height: 2rem;
+    width: calc(100% - 2rem);
+    max-width: var(--bh-max-content-width);
+    margin: 2rem auto 1rem auto;
 }
 
 .content {
-    flex: 1;
+    width: calc(100% - 2rem);
+    max-width: var(--bh-max-content-width);
+    margin: 0 auto;
+    /* flex: 1; */
+    min-height: calc(100vh - 10rem);
 }
 
 .avatar {
@@ -142,6 +141,10 @@
 .song-link-icon {
     width: 1.2rem;
     height: 1.2rem;
+}
+
+.song-link-text {
+    margin-left: 0.3rem;
 }
 
 .song-link-text-full {

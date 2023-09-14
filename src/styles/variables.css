@@ -17,6 +17,10 @@ body {
     --bh-recognized-song-cover-size: 200px;
     --bh-recognized-song-cover-border-radius: 32px;
     --bh-recommendation-song-cover-size: 80px;
+    --bh-dropdwon-border-radius: 8px;
+    --bh-dropdown-width: 80px;
+    --bh-dropdown-height: 24px;
+    --bh-max-content-width: 1050px;
 
     --bh-color: #0e0e10;
     --bh-color-rgb: 14, 14, 16;

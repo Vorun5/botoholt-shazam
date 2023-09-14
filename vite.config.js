@@ -14,6 +14,8 @@ export default defineConfig({
             assets: '/src/assets',
             pages: '/src/pages',
             lib: '/src/lib',
+            store: '/src/store',
+            api: '/src/api',
         },
     },
 })

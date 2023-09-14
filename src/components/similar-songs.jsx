@@ -1,19 +1,19 @@
-import PropTypes from 'prop-types'
+import { useSimilarSongs } from 'store/similar-songs'
 import { RecommendationSong } from './recommendation-song'
 
-export function SimilarSongs({ songs }) {
+export function SimilarSongs() {
+    const { similarSongs } = useSimilarSongs()
+
+    if (!similarSongs || similarSongs.length === 0) return <></>
+
     return (
         <section className="recommendation similar-songs">
             <h4 className="recommendation-title">Similar songs</h4>
             <div className="recommendation-songs">
-                {songs.map((song) => (
+                {similarSongs.map((song) => (
                     <RecommendationSong key={song.id} song={song} />
                 ))}
             </div>
         </section>
     )
-}
-
-SimilarSongs.propTypes = {
-    songs: PropTypes.array,
 }
