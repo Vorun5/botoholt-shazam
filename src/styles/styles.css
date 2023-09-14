@@ -16,7 +16,6 @@
     width: calc(100% - 2rem);
     max-width: var(--bh-max-content-width);
     margin: 0 auto;
-    /* flex: 1; */
     min-height: calc(100vh - 10rem);
 }
 
