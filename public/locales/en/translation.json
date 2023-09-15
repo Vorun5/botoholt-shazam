@@ -1,0 +1,29 @@
+{
+    "end-time": "End time",
+    "is-now-listening": "is now listening",
+    "languages": {
+        "en": "English",
+        "ru": "Русский"
+    },
+    "other-songs-by-artist": "Other songs by {{artist}}",
+    "select-language": "Select language",
+    "select-theme": "Select theme",
+    "shazam-field-placeholder": "Enter streamer nickname or streamer link",
+    "shazam-information": "Shazam information",
+    "shazam-streamer-again": "{{streamer}} ещё раз",
+    "shazaming": "Shazaming...",
+    "similar-songs": "Smimilar songs",
+    "site-description": "Botoholt Shazam - a service for easily shazaming any stream on Twitch",
+    "song-not-recognized": "Song not recognized",
+    "start-time": "Start time",
+    "stay-connected": "Stay connected",
+    "streamer-not-found": "Streamer not found",
+    "streamer-offline": "Streamer offline",
+    "support-service": "Support service",
+    "themes": {
+        "dark": "Dark",
+        "light": "Light",
+        "system": "System"
+    },
+    "unknown-error": "Unknown error"
+}

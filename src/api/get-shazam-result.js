@@ -9,7 +9,7 @@ export async function getShazamResult(source) {
         return {
             status: 'success',
             // streamer-not-found streamer-offline unknown song-not-recognized
-            errorType: 'streamer-offline',
+            errorType: 'streamer-not-found',
             username: 'Smurf_tv',
             avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/309c7c07-6269-479d-8239-71a31ed35807-profile_image-70x70.png',
             song: {

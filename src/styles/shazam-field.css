@@ -11,7 +11,7 @@
 }
 
 .shazam-field-center {
-    padding-top: calc((100vh / 2) - 10rem);
+    padding-top: calc((100vh / 2) - 9rem);
     transition: 0.5s ease-in-out padding-top;
 }
 

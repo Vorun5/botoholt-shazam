@@ -1,17 +1,17 @@
 import { useState, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useTheme } from 'hooks/use-theme'
 import { useOnClickOutside } from 'hooks/use-on-click-outside'
 import { ReactComponent as GithubIcon } from 'assets/github.svg'
 import { ReactComponent as DiscordIcon } from 'assets/discord.svg'
 
 export function Footer() {
+    const { t } = useTranslation()
+
     return (
         <footer className="footer">
             <div className="footer-content">
-                <h1 className="footer-title">
-                    Botoholt Shazam - a service for easily shazaming any stream
-                    on Twitch
-                </h1>
+                <h1 className="footer-title">{t('site-description')}</h1>
                 <div className="footer-actions">
                     <div className="footer-settings">
                         <Themes />
@@ -19,7 +19,7 @@ export function Footer() {
                     </div>
                     <div className="footer-links">
                         <span className="footer-links-title">
-                            Stay connected
+                            {t('stay-connected')}
                         </span>
                         <a
                             className="footer-link"
@@ -61,7 +61,7 @@ export function Footer() {
                     className="footer-support"
                     href="https://boosty.to/botoholt/donate"
                 >
-                    Support service
+                    {t('support-service')}
                 </a>
             </div>
         </footer>
@@ -69,6 +69,7 @@ export function Footer() {
 }
 
 function Themes() {
+    const { t } = useTranslation()
     const [currentTheme, switchTheme] = useTheme()
     const [themeDropdownIsOpen, setThemeDropdownIsOpen] = useState(false)
     const ref = useRef()
@@ -81,7 +82,7 @@ function Themes() {
 
     return (
         <div className="themes" ref={ref}>
-            <span className="footer-setting-title">Select theme</span>
+            <span className="footer-setting-title">{t('select-theme')}</span>
             <div
                 className={`dropdown ${
                     themeDropdownIsOpen ? 'dropdown-open' : ''
@@ -94,7 +95,7 @@ function Themes() {
                         setThemeDropdownIsOpen(!themeDropdownIsOpen)
                     }}
                 >
-                    {currentTheme}
+                    {t(`themes.${currentTheme}`)}
                 </button>
                 <div className="dropdown-elements">
                     {['system', 'light', 'dark'].map((theme) => {
@@ -112,7 +113,7 @@ function Themes() {
                                     setThemeDropdownIsOpen(false)
                                 }}
                             >
-                                {theme}
+                                {t(`themes.${theme}`)}
                             </button>
                         )
                     })}
@@ -123,7 +124,7 @@ function Themes() {
 }
 
 function Languages() {
-    const [currentLanguage, switchLanguage] = useState('ru')
+    const { t, i18n } = useTranslation()
     const [languageDropdownIsOpen, setLanguageDropdownIsOpen] = useState(false)
     const ref = useRef()
 
@@ -135,7 +136,7 @@ function Languages() {
 
     return (
         <div className="languages" ref={ref}>
-            <span className="footer-setting-title">Select language</span>
+            <span className="footer-setting-title">{t('select-language')}</span>
             <div
                 className={`dropdown ${
                     languageDropdownIsOpen ? 'dropdown-open' : ''
@@ -148,25 +149,25 @@ function Languages() {
                         setLanguageDropdownIsOpen(!languageDropdownIsOpen)
                     }}
                 >
-                    {currentLanguage}
+                    {t(`languages.${i18n.language}`)}
                 </button>
                 <div className="dropdown-elements">
-                    {['ru', 'en', 'lt'].map((language) => {
+                    {['en', 'ru', 'lt'].map((language) => {
                         return (
                             <button
                                 key={language}
                                 className={`dropdown-element ${
-                                    language === currentLanguage
+                                    language === i18n.language
                                         ? 'focused-dropdown-element'
                                         : ''
                                 }`}
                                 type="button"
                                 onClick={() => {
-                                    switchLanguage(language)
+                                    i18n.changeLanguage(language)
                                     setLanguageDropdownIsOpen(false)
                                 }}
                             >
-                                {language}
+                                {t(`languages.${language}`)}
                             </button>
                         )
                     })}

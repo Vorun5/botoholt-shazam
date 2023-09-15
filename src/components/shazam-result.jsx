@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Artists } from './artists'
 import { Avatar } from './avatar'
 import { useShazamResult } from 'store/shazam-result'
@@ -6,9 +8,10 @@ import { useSimilarSongs } from 'store/similar-songs'
 import { getTimeFromDate } from 'lib/get-time-from-date'
 import { ReactComponent as ShazamIcon } from 'assets/shazam-icon.svg'
 import { ReactComponent as YoutubeIcon } from 'assets/youtube-icon.svg'
-import { useEffect } from 'react'
 
 export function ShazamResult() {
+    const { t } = useTranslation()
+
     const {
         shazamResult,
         shazamResultIsLoading,
@@ -20,7 +23,6 @@ export function ShazamResult() {
     const { loadSimilarSongs, resetSimilarSongs } = useSimilarSongs()
 
     useEffect(() => {
-        console.log(shazamResult)
         if (shazamResult && shazamResult.status === 'success') {
             loadOtherSongsArtist(shazamResult.song.artists[0])
             loadSimilarSongs(shazamResult.song.id)
@@ -40,7 +42,9 @@ export function ShazamResult() {
         return (
             <div className="shazam-result-loading">
                 <ShazamIcon width={60} className="shazam-result-loading-icon" />
-                <span className="shazam-result-loading-text">Shazaming...</span>
+                <span className="shazam-result-loading-text">
+                    {t('shazaming')}
+                </span>
             </div>
         )
     }
@@ -58,7 +62,7 @@ export function ShazamResult() {
                             alt="PikaT"
                         />
                         <span className="shazam-result-error-text">
-                            Streamer offline
+                            {t('streamer-offline')}
                         </span>
                     </>
                 )}
@@ -70,7 +74,7 @@ export function ShazamResult() {
                             alt="PikaMeh"
                         />
                         <span className="shazam-result-error-text">
-                            Streamer not found
+                            {t('streamer-not-found')}
                         </span>
                     </>
                 )}
@@ -83,7 +87,7 @@ export function ShazamResult() {
                         />
 
                         <span className="shazam-result-error-text">
-                            Unknown error
+                            {t('unknown-error')}
                         </span>
                     </>
                 )}
@@ -95,7 +99,7 @@ export function ShazamResult() {
                             alt="PikaSad"
                         />
                         <span className="shazam-result-error-text">
-                            Song not recognized
+                            {t('song-not-recognized')}
                         </span>
                     </>
                 )}
@@ -119,7 +123,7 @@ export function ShazamResult() {
                             {shazamResult.username}
                         </a>
                         <span className="streamer-description">
-                            is now listening
+                            {t('is-now-listening')}
                         </span>
                     </span>
                 </div>
@@ -167,14 +171,14 @@ export function ShazamResult() {
                     <div className="shazam-result-success-info-divider" />
                     <div className="shazam-info">
                         <h3 className="shazam-info-title">
-                            Shazam information
+                            {t('shazam-information')}
                         </h3>
                         <span className="shazam-info-time">
-                            Start time:{' '}
+                            {t('start-time')}:{' '}
                             {getTimeFromDate(shazamResult.song.shazamStartTime)}
                         </span>
                         <span className="shazam-info-time">
-                            End time:{' '}
+                            {t('end-time')}:{' '}
                             {getTimeFromDate(shazamResult.song.shazamEndTime)}
                         </span>
                         <button
@@ -190,7 +194,9 @@ export function ShazamResult() {
                         >
                             <ShazamIcon className="song-link-icon" />
                             <span className="song-link-text-full">
-                                {shazamResult.username} again
+                                {t('shazam-streamer-again', {
+                                    streamer: shazamResult.username,
+                                })}
                             </span>
                         </button>
                     </div>

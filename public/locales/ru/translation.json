@@ -1,0 +1,29 @@
+{
+    "end-time": "Время окончания",
+    "is-now-listening": "сейчас слушает",
+    "languages": {
+        "en": "English",
+        "ru": "Русский"
+    },
+    "other-songs-by-artist": "Другие песни {{artist}}",
+    "select-language": "Выбрать язык",
+    "select-theme": "Выбрать тему",
+    "shazam-field-placeholder": "Введите ник стримера или ссылку на стримера",
+    "shazam-information": "Информация о Шазаме",
+    "shazam-streamer-again": "{{streamer}} again",
+    "shazaming": "Шазаминг...",
+    "similar-songs": "Похожие песни",
+    "site-description": "Botoholt Shazam — сервис для легкого шазминга любого стрима на Twitch",
+    "song-not-recognized": "Песня не распознана",
+    "start-time": "Время начала",
+    "stay-connected": "Оставайся на связи",
+    "streamer-not-found": "Стример не найден",
+    "streamer-offline": "Стример оффлайн",
+    "support-service": "Поддержать сервис",
+    "themes": {
+        "dark": "Темная",
+        "light": "Светлая",
+        "system": "Системная"
+    },
+    "unknown-error": "Неизвестная ошибка"
+}
