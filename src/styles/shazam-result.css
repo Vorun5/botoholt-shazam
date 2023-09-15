@@ -1,0 +1,111 @@
+.shazam-result {
+    margin: 1rem 0;
+    background-color: rgb(var(--bh-color-rgb), 0.01);
+    border-radius: var(--bh-card-border-radius);
+    border: var(--bh-card-border-width) solid rgb(var(--bh-color-rgb), 0.1);
+    padding: 1rem;
+}
+
+.shazam-result-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shazam-result-error-img {
+    height: 100px;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.shazam-result-error-text {
+    font-size: 1.2rem;
+    color: var(--bh-color);
+    font-weight: 600;
+}
+
+.shazam-result-success-info {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.shazam-result-success-info-divider {
+    margin-top: 1.5rem;
+    height: 1px;
+    background-color: rgb(var(--bh-color-rgb), 0.1);
+}
+
+.shazam-info {
+    margin-top: 1rem;
+    padding-inline: 1.5rem;
+}
+
+.shazam-info-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--bh-color);
+}
+
+.shazam-info-time {
+    margin-top: 0.5rem;
+    display: block;
+    color: var(--bh-color);
+}
+
+.shazam-info-bth {
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.shazam-result-loading {
+    width: 100%;
+}
+
+.shazam-result-loading-icon {
+    display: block;
+    margin: 1.5rem auto 1rem auto;
+    fill: var(--bh-blue);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.shazam-result-loading-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--bh-color);
+    font-weight: 600;
+}
+
+@media (min-width: 800px) {
+    .shazam-result-success-info {
+        flex-direction: row;
+    }
+
+    .shazam-result-success-info-divider {
+        width: 1px;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .shazam-info {
+        margin: 1rem 0;
+    }
+}
+
+@media (min-width: 650px) {
+    .shazam-result {
+        padding: 1.5rem;
+    }
+}

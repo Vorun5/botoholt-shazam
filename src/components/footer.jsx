@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useTheme } from 'hooks/use-theme'
+import { useOnClickOutside } from 'hooks/use-on-click-outside'
 import { ReactComponent as GithubIcon } from 'assets/github.svg'
 import { ReactComponent as DiscordIcon } from 'assets/discord.svg'
 
@@ -70,9 +71,16 @@ export function Footer() {
 function Themes() {
     const [currentTheme, switchTheme] = useTheme()
     const [themeDropdownIsOpen, setThemeDropdownIsOpen] = useState(false)
+    const ref = useRef()
+
+    useOnClickOutside(ref, () => {
+        if (themeDropdownIsOpen) {
+            setThemeDropdownIsOpen(false)
+        }
+    })
 
     return (
-        <div className="themes">
+        <div className="themes" ref={ref}>
             <span className="footer-setting-title">Select theme</span>
             <div
                 className={`dropdown ${
@@ -117,9 +125,16 @@ function Themes() {
 function Languages() {
     const [currentLanguage, switchLanguage] = useState('ru')
     const [languageDropdownIsOpen, setLanguageDropdownIsOpen] = useState(false)
+    const ref = useRef()
+
+    useOnClickOutside(ref, () => {
+        if (languageDropdownIsOpen) {
+            setLanguageDropdownIsOpen(false)
+        }
+    })
 
     return (
-        <div className="languages">
+        <div className="languages" ref={ref}>
             <span className="footer-setting-title">Select language</span>
             <div
                 className={`dropdown ${

@@ -5,10 +5,11 @@ export async function getShazamResult(source) {
         console.log(source)
 
         const time = new Date()
-        
+
         return {
             status: 'success',
-            // errorType: 'streamer-not-found',
+            // streamer-not-found streamer-offline unknown song-not-recognized
+            errorType: 'streamer-offline',
             username: 'Smurf_tv',
             avatar: 'https://static-cdn.jtvnw.net/jtv_user_pictures/309c7c07-6269-479d-8239-71a31ed35807-profile_image-70x70.png',
             song: {
